@@ -16,8 +16,8 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 # langchain 및 관련 모듈: 문서 로드, 텍스트 분할, 임베딩 생성, 검색기 구성 등을 위한 라이브러리입니다.
 
 # 환경 변수 로드
-langchain_api_key = st.secrets["general"]["langchain_api_key"]
-google_api_key = st.secrets["general"]["google_api_key"]
+os.environ["LANCHAIN_API_KEY"] = st.secrets["general"]["langchain_api_key"]
+os.environ["GOOGLE_API_KEY"] = st.secrets["general"]["google_api_key"]
 os.environ["UPSTAGE_API_KEY"] = st.secrets["general"]["upstage_api_key"]
 
 # 프로젝트 로깅 설정
