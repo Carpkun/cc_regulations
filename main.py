@@ -25,6 +25,7 @@ logging.langsmith("CC_REGULATION_Chatbot")
 
 # Streamlit 웹 앱의 제목 설정
 st.title("춘천문화원 제규정 GPT 💬")
+st.caption("2024년 7월까지의 개정 사항을 반영하고 있습니다.")
 
 # 사용자의 대화 상태를 초기화합니다.
 if "messages" not in st.session_state:
