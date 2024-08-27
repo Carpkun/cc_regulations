@@ -16,9 +16,6 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 # langchain 및 관련 모듈: 문서 로드, 텍스트 분할, 임베딩 생성, 검색기 구성 등을 위한 라이브러리입니다.
 
 # 환경 변수 로드
-# for key in ["LANGCHAIN_API_KEY", "GOOGLE_API_KEY", "UPSTAGE_API_KEY"]:
-#     os.environ[key] = st.secrets["general"][key.lower()]
-# os.environ["LANGCHAIN_API_KEY"] = st.secrets["general"]["langchain_api_key"]
 os.environ["GOOGLE_API_KEY"] = st.secrets["general"]["google_api_key"]
 os.environ["UPSTAGE_API_KEY"] = st.secrets["general"]["upstage_api_key"]
 
@@ -128,7 +125,7 @@ def create_chain():
         #Answer:"""
     )
 
-    llm = ChatGoogleGenerativeAI(model="gemini-1.5-flash", temperature=0)
+    llm = ChatGoogleGenerativeAI(model="gemini-1.5-pro", temperature=0)
 
     chain = (
         {"context": retriever, "question": RunnablePassthrough()}
