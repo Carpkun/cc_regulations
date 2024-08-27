@@ -104,6 +104,7 @@ def create_chain():
         If you don't know the answer, just say that you don't know. 
         Answer in Korean.
         Make sure the output is all the same size characters.
+        Never enclose your answer in parentheses.
         Be sure to include your source and page numbers in your answer.
         Please follow the rules below when attributing sources.
         - "regulations.pdf" : "춘천문화원 제규정집"
@@ -125,7 +126,7 @@ def create_chain():
         #Answer:"""
     )
 
-    llm = ChatGoogleGenerativeAI(model="gemini-1.5-pro", temperature=0)
+    llm = ChatGoogleGenerativeAI(model="gemini-1.5-flash", temperature=0)
 
     chain = (
         {"context": retriever, "question": RunnablePassthrough()}
