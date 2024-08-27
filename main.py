@@ -18,7 +18,7 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 # 환경 변수 로드
 langchain_api_key = st.secrets["general"]["langchain_api_key"]
 google_api_key = st.secrets["general"]["google_api_key"]
-upstage_api_key = st.secrets["general"]["upstage_api_key"]
+os.environ["UPSTAGE_API_KEY"] = st.secrets["general"]["upstage_api_key"]
 
 # 프로젝트 로깅 설정
 from langchain_teddynote import logging
