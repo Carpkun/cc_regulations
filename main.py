@@ -19,10 +19,6 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 os.environ["GOOGLE_API_KEY"] = st.secrets["general"]["google_api_key"]
 os.environ["UPSTAGE_API_KEY"] = st.secrets["general"]["upstage_api_key"]
 
-# 프로젝트 로깅 설정
-from langchain_teddynote import logging
-logging.langsmith("CC_REGULATION_Chatbot")
-
 # Streamlit 웹 앱의 제목 설정
 st.title("춘천문화원 제규정 GPT 💬")
 st.caption("2024년 7월까지의 개정사항을 반영하고 있습니다.")
